@@ -16,15 +16,14 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from django.conf.urls import url
-from django.contrib.admin import views
+from .apps.Adminnistrador import views
 
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    #path('', include('ParcialBurnout.apps.Adminnistrador.urls')),
-    path('',include('ParcialBurnout.apps.Adminnistrador.urls')),
-    #url(r'^home/$', 'templates.index', name = "login"),
-    
+  #CB
+    url(r'^home/$',views.Homepage),
+    url(r'^$',views.Homepage),
     
 ]

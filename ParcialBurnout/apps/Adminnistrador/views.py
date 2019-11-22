@@ -5,7 +5,11 @@ from django.shortcuts import render_to_response
 
 # Create your views here.
 
-def index(request):
+#def index(request):
     #return HttpResponse('<a href="{% url 'index' %}" >Home</a>')
     #return render(request, 'templates/index.html', {})
-    return render(request, 'templates/index.html', {})
+    #return render(request, 'templates/index.html', {})
+
+def Homepage(request):
+    #CB
+     return render(request,'home.html')

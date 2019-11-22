@@ -38,7 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'ParcialBurnout.apps.Adminnistrador',
-    'bootstrap4',
+    
     
 ]
 
@@ -57,7 +57,7 @@ ROOT_URLCONF = 'ParcialBurnout.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'templates')],
+        'DIRS': [os.path.join(BASE_DIR, 'ParcialBurnout/templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
