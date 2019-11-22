@@ -2,24 +2,26 @@ from django.db import models
 
 # Create your models here.
 
-class Empresa(models.Model):
-    nombre = models.CharField('Nombre de la empresa', max_length=150, unique=True)
+class Company(models.Model):
+    name = models.CharField('Name', max_length=150, unique=True)
+    address = models.CharField('Address', max_length=150, unique=True)
+    phone = models.CharField('Phone', max_length=150, unique=True)
+    email = models.EmailField('E-mail', max_length=150, unique=True)
     class Meta:
-        verbose_name = 'Empresa'
-        verbose_name_plural = 'Empresas'
+        verbose_name = 'Company'
+        verbose_name_plural = 'Companies'
 
     def __str__(self):
-        return self.nombre
+        return self.name
 
-class Usuario(models.Model):
-    nombre = models.CharField('Nombre de usuario', max_length=150, unique=True)
-    id_empresa = models.ForeignKey(Empresa, on_delete=models.CASCADE)
+class User(models.Model):
+    name = models.CharField('User name', max_length=150, unique=True)
+    last_name = models.CharField('Last name', max_length=150, unique=True)
+    id_card = models.IntegerField('C.C', unique=True)
+    id_company = models.ForeignKey(Company, on_delete=models.CASCADE)
+    address = models.CharField('Address', max_length=150, unique=True)
+    phone = models.CharField('Phone', max_length=150, unique=True)
+    email = models.EmailField('E-mail', max_length=150, unique=True)
     class Meta:
-        verbose_name = 'Usuario'
-        verbose_name_plural = 'Usuarios'
-
-class Lista(models.Model):
-    id_usuarios = models.ForeignKey(Usuario, on_delete=models.CASCADE)
-    class Meta:
-        verbose_name = 'Lista'
-        verbose_name_plural = 'Listas'
+        verbose_name = 'User'
+        verbose_name_plural = 'Users'
