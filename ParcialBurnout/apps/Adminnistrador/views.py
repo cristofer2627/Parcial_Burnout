@@ -13,3 +13,11 @@ from django.shortcuts import render_to_response
 def Homepage(request):
     #CB
      return render(request,'home.html')
+
+def Login_user(request):
+    #CB
+     return render(request,'login_user.html')
+
+def test(request):
+    #CB
+     return render(request,'test.html')

@@ -22,8 +22,10 @@ from .apps.Adminnistrador import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('accounts/', include('django.contrib.auth.urls')),
   #CB
     url(r'^home/$',views.Homepage),
     url(r'^$',views.Homepage),
-    
+    url(r'^login_user/$',views.Login_user),
+    url(r'^test/$',views.test),
 ]
