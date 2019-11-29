@@ -21,3 +21,11 @@ def Login_user(request):
 def test(request):
     #CB
      return render(request,'test.html')
+
+def Dataphp(request):
+    #CB
+     return render(request,'operar.php')
+
+def Dbz11111(request):
+    #CB
+     return render(request,'accion.php')

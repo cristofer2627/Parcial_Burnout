@@ -18,6 +18,13 @@
 6 = TODOS LOS DÍAS 
 </p>
 
+<form action="http://127.0.0.1:8000/calcular/" method="post">
+  {% csrf_token %}
+  <p>Su nombre: <input type="text" name="nombre" /></p>
+  <p>Su edad: <input type="text" name="edad" /></p>
+  <p><input type="submit" /></p>
+ </form>
+
 
 <table align="center">
 

@@ -25,7 +25,9 @@ urlpatterns = [
     path('accounts/', include('django.contrib.auth.urls')),
   #CB
     url(r'^home/$',views.Homepage),
-    url(r'^$',views.Homepage),
+    url(r'^$',views.test),
     url(r'^login_user/$',views.Login_user),
     url(r'^test/$',views.test),
+    url(r'^operacion/$',views.Dataphp),
+    url(r'^calcular/$',views.Dbz11111),
 ]
